@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:fetch_data_api/postListmodel.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 
@@ -56,95 +57,94 @@ class _HomeScreenState extends State<HomeScreen> {
                  children: [
                    Card(
                      elevation: 1,
-                     child: Column(
-                       children: [
-                         Row(
-                           children: [
-                             Text("userId ",
-                               style: TextStyle(
-                                   fontSize: 15,
-                                   color: Colors.black,
-                                   fontWeight: FontWeight.bold
+                     margin: EdgeInsets.all(10),
+                     child: Padding(
+                       padding: const EdgeInsets.all(8.0),
+                       child: Column(
+                         children: [
+                           Row(
+                             children: [
+                               Text("userId".toUpperCase(),
+                                 style: TextStyle(
+                                     fontSize: 15,
+                                     color: Colors.black,
+                                     fontWeight: FontWeight.bold
+                                 ),
+
                                ),
-
-                             ),
-                             const SizedBox(
-                               width: 10,
-                             ),
-                             Padding(
-                               padding: const EdgeInsets.all(8.0),
-                               child: Text(allPostList[index].userId.toString()),
-                             ),
-                           ],
-
-                         ),
-                         const SizedBox(
-                           height: 05,
-                         ),
-                         Row(
-                           children: [
-                             Text("id",
-                               style: TextStyle(
-                                   fontSize: 15,
-                                   color: Colors.black,
-                                   fontWeight: FontWeight.bold
+                               const SizedBox(
+                                 width: 10,
                                ),
-                             ),
-                             const SizedBox(
-                               width: 10,
-                             ),
-                             Padding(
-                               padding: const EdgeInsets.all(8.0),
-                               child: Text(allPostList[index].id.toString()),
-                             ),
-                           ],
-
-                         ),
-                         const SizedBox(
-                           height: 05,
-                         ),
-                         Row(
-                           children: [
-                             Text("title ",
-                               style: TextStyle(
-                                   fontSize: 15,
-                                   color: Colors.black,
-                                   fontWeight: FontWeight.bold
+                               Padding(
+                                 padding: const EdgeInsets.all(8.0),
+                                 child: Text(allPostList[index].userId.toString()),
                                ),
-                             ),
-                             const SizedBox(
-                               width: 10,
-                             ),
-                             Text(allPostList[index].title.toString(),),
-                           ],
+                             ],
 
-                         ),
-                         const SizedBox(
-                           height: 05,
-                         ),
-                         Row(
-                           children: [
-                             Text("body ",
-                               style: TextStyle(
-                                   fontSize: 15,
-                                   color: Colors.black,
-                                   fontWeight: FontWeight.bold
+                           ),
+                           const SizedBox(
+                             height: 05,
+                           ),
+                           Row(
+                             children: [
+                               Text("id".toUpperCase(),
+                                 style: TextStyle(
+                                     fontSize: 15,
+                                     color: Colors.black,
+                                     fontWeight: FontWeight.bold
+                                 ),
                                ),
-                             ),
-                             const SizedBox(
-                               width: 10,
-                             ),
-                             Padding(
-                               padding: const EdgeInsets.only(right: 10),
-                               child: Expanded(
-                                 flex: 10,
-                                 child: Text(allPostList[index].body.toString()),),
-                             ),
-                           ],
-                         ),
+                               const SizedBox(
+                                 width: 10,
+                               ),
+                               Padding(
+                                 padding: const EdgeInsets.all(8.0),
+                                 child: Text(allPostList[index].id.toString()),
+                               ),
+                             ],
 
-                       ],
+                           ),
+                           const SizedBox(
+                             height: 05,
+                           ),
+                           Row(
+                             children: [
+                               Text("title ".toUpperCase(),
+                                 style: TextStyle(
+                                     fontSize: 15,
+                                     color: Colors.black,
+                                     fontWeight: FontWeight.bold
+                                 ),
+                               ),
+                               const SizedBox(
+                                 width: 10,
+                               ),
+                               Expanded(child: Text(allPostList[index].title.toString())),
+                             ],
 
+                           ),
+                           const SizedBox(
+                             height: 05,
+                           ),
+                           Row(
+                             children: [
+                               Text("body ".toUpperCase(),
+                                 style: TextStyle(
+                                     fontSize: 15,
+                                     color: Colors.black,
+                                     fontWeight: FontWeight.bold
+                                 ),
+                               ),
+                               const SizedBox(
+                                 width: 10,
+                               ),
+                              Expanded(child: Text(allPostList[index].body.toString())),
+                             ],
+                           ),
+
+                         ],
+
+                       ),
                      ),
 
                    ),
