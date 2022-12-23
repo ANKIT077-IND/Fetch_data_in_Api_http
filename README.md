@@ -1,16 +1,9 @@
-# fetch_data_api
+Fetching data from the internet is necessary for most apps. Luckily, Dart and Flutter provide tools, such as the http package, for this type of work.
 
-A new Flutter project.
+This recipe uses the following steps:
 
-## Getting Started
+Add the http package.
+Make a network request using the http package.
+Convert the response into a custom Dart object.
+Fetch and display the data with Flutter.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
